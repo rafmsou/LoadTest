@@ -17,7 +17,7 @@ async def fetch_one(url):
 async def main():
     tasks = []
 
-    for i in range(0, 5000):
+    for i in range(0, 2000):
         url = 'http://201.6.17.212/AVS/besc?action=GetAggregatedContentDetails&channel=PCTV&version=1.2&contentId=1000001189'
         task = await curio.spawn(fetch_one(url))
         tasks.append(task)
